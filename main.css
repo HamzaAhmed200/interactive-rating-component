@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "op reg";
+  src: url(fonts/Overpass-Regular.ttf);
+}
+@font-face {
+  font-family: "op bold";
+  src: url(fonts/Overpass-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-inline: 15.5%;
+}
+
+.container > div {
+  background-color: #1f2630;
+  padding: 2rem;
+  width: 40%;
+  border-radius: 25px;
+}
+@media (max-width: 400px) {
+  .container > div {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+h2 {
+  font-family: "op bold";
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 5%;
+  font-size: 1.5em;
+}
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+p {
+  font-family: "op reg";
+  color: hsl(216, 12%, 54%);
+  font-size: 1.25em;
+  margin-bottom: 5%;
+  line-height: 157%;
+  padding-right: 9%;
+}
+@media (max-width: 400px) {
+  p {
+    font-size: 1em;
+    padding: 0;
+  }
+}
+
+.star {
+  margin-bottom: 6%;
+  width: 1em;
+  height: 1em;
+  padding: 1rem;
+}
+
+.star,
+.rate span {
+  background-color: #262f38;
+  border-radius: 50%;
+}
+
+.rate {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, auto);
+  gap: calc((100% - 240px) / 5);
+}
+.rate span {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  font-family: "op reg";
+  text-align: center;
+  color: hsl(217, 12%, 63%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rate span:hover {
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+@media (max-width: 400px) {
+  .rate span {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .rate {
+    gap: calc((100% - 140px) / 5);
+  }
+}
+
+button {
+  margin-top: 9%;
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+  width: 100%;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 1.25em;
+  padding-block: 0.5rem;
+  font-family: "op reg";
+  border: 1px solid black;
+}
+button:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
+  text-align: center;
+  font-family: "op reg";
+  color: hsl(25, 97%, 53%);
+  margin: 1.5em auto;
+  background-color: #262f38;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.thx, .alert {
+  display: none;
+}
+
+.alert h2 {
+  text-align: center;
+}
+
+#selected {
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+}/*# sourceMappingURL=main.css.map */

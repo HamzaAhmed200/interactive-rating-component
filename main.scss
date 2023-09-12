@@ -1,0 +1,170 @@
+// Variables
+$orange : hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+// Variables
+
+// Fonts
+
+@font-face {
+    font-family: "op reg";
+    src: url(fonts/Overpass-Regular.ttf);
+}
+@font-face {
+    font-family: "op bold";
+    src: url(fonts/Overpass-Bold.ttf);
+}
+// Fonts
+
+// Global
+* {
+    margin: 0;
+    padding: 0;
+    word-break: break-word;
+}
+
+body {
+    background-color: $Very-Dark-Blue;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-inline: 15.5%;
+}
+
+.container > div {
+    background-color: #1f2630;
+    padding: 2rem;
+    width: 40%;
+    border-radius: 25px;
+    @media (max-width : 400px) {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+// Global
+
+// Rate Page
+h2 {
+    font-family: "op bold";
+    color: $White;
+    margin-bottom: 5%;
+    font-size: 1.5em;
+    @media (max-width : 400px ) {
+        font-size: 1.25em;
+    }
+}
+
+p {
+    font-family: "op reg";
+    color: $Medium-Grey;
+    font-size: 1.25em;
+    margin-bottom: 5%;
+    line-height: 157%;
+    padding-right: 9%;
+    @media (max-width : 400px ) {
+        font-size: 1em;
+        padding: 0;
+    }
+}
+
+.star {
+    margin-bottom: 6%;
+    width: 1em;
+    height: 1em;
+    padding: 1rem;
+}
+
+.star ,
+.rate span {
+    background-color: #262f38;
+    border-radius: 50%;
+}
+
+.rate {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+    gap: calc((100% - (40px * 6)) / 5);
+    span {
+        width: 40px;
+        height: 40px;
+        padding: 0.5rem;
+        font-family: "op reg";
+        text-align: center;
+        color: hsl(217, 12%, 63%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            color: white;
+            background-color: $orange;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        @media (max-width : 400px ) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @media (max-width : 400px ) {
+    gap: calc((100% - (20px * 7)) / 5);
+    }
+}
+
+button {
+    margin-top: 9%;
+    color: white;
+    background-color: $orange;
+    width: 100%;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 1.25em;
+    padding-block: 0.5rem;
+    font-family: "op reg";
+    border: 1px solid black;
+    &:hover {
+        color: $orange;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+}
+
+// Rate Page
+
+// Thanks Page
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.rating {
+    text-align: center;
+    font-family: "op reg";
+    color: $orange;
+    margin: 1.5em auto;
+    background-color: #262f38;
+    width: fit-content;
+    padding:0.25rem 0.75rem;
+    border-radius: 50px;
+}
+// Thanks Page
+
+
+.thx , .alert{
+    display: none;
+}
+
+.alert h2 {
+    text-align: center;
+}
+
+#selected {
+    color: white;
+    background-color: $orange;
+}
